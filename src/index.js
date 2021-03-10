@@ -9,8 +9,8 @@ import { Auth0Provider } from '@auth0/auth0-react';
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-      domain="bluevox.auth0.com"
-      clientId="cQBbfIfp14zUva52Hr0nbFIhgYteh5wg"
+      domain={process.env.REACT_APP_AUTH_DOMAIN}
+      clientId={process.env.REACT_APP_AUTH_CLIENT_ID}
       redirectUri={window.location.origin}
       cacheLocation="localstorage"
     >
